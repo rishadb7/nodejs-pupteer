@@ -1,7 +1,26 @@
 {
+  "name": "nodejs-pupteer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishadb7/nodejs-pupteer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rishadb7/nodejs-pupteer/issues"
+  },
+  "homepage": "https://github.com/rishadb7/nodejs-pupteer#readme",
   "dependencies": {
     "express": "^4.19.2",
-    "playwright": "^1.44.1",
-    "puppeteer": "^22.10.0"
+    "puppeteer": "^22.10.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-recaptcha": "^3.6.8",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   }
 }
