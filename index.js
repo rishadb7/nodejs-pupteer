@@ -108,17 +108,19 @@ app.get('/it2', async function (req, res) {
         browser = await puppeteer.launch({
             headless: true,
 
-            args: ['--disable-web-security',
+            args: [
+                
+                '--disable-web-security',
                 '--disable-features=IsolateOrigins,site-per-process',
-              //  `--proxy-server=${proxyServer}`
+               
             ]
         });
 
         const page = await browser.newPage();
-        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36');
-        await page.setViewport({ width: 1366, height: 768 });
-        await page.setDefaultNavigationTimeout(60000);
-        await page.setDefaultTimeout(60000);
+        // await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36');
+        // await page.setViewport({ width: 1366, height: 768 });
+        // await page.setDefaultNavigationTimeout(60000);
+        // await page.setDefaultTimeout(60000);
 
 
 
