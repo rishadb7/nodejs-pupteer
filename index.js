@@ -12,7 +12,7 @@ app.get('/', function (req, res) {
        // executablePath: '/usr/bin/chromium-browser',
         args: ['--no-sandbox', '--disable-setuid-sandbox', '--single-process',
             '--disable-web-security', '--disable-features=IsolateOrigins,site-per-process',
-            '--proxy-server=13.235.242.121 :7000'
+           // '--proxy-server=13.235.242.121 :7000'
 
         ]
     }
