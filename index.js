@@ -11,7 +11,8 @@ app.get('/', function (req, res) {
         headless: true,
         executablePath: '/usr/bin/chromium-browser',
         args: ['--no-sandbox', '--disable-setuid-sandbox', '--single-process',
-            '--disable-web-security', '--disable-features=IsolateOrigins,site-per-process'
+            '--disable-web-security', '--disable-features=IsolateOrigins,site-per-process',
+            '--proxy-server=13.235.242.121 :7000'
 
         ]
     }
@@ -32,7 +33,10 @@ app.get('/', function (req, res) {
     });
 });
 
+app.get('/test',async function (req,res){
 
+    res.send("test sroute")
+})
 
 
 app.get('/it', async function (req, res) {
