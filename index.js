@@ -1,6 +1,7 @@
 const express = require('express'); // Adding Express
 const app = express(); // Initializing Express
 const puppeteer = require('puppeteer');
+const { chromium } = require('playwright'); // Importing Playwright
 
 
 app.get('/', function (req, res) {
@@ -31,6 +32,32 @@ app.get('/', function (req, res) {
         res.send(pageTitle);
 
     });
+});
+
+app.get('/playwrite', async function (req, res) {
+    // Launching the Playwright controlled headless browser and navigate to the Digimon website
+    const browser = await chromium.launch({
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox', '--single-process',
+            '--disable-web-security', '--disable-features=IsolateOrigins,site-per-process']
+    });
+    
+    const page = await browser.newPage();
+    console.log("Before loading page");
+
+    // Navigate to the login page
+    await page.goto('https://eportal.incometax.gov.in/iec/foservices/#/login', { waitUntil: 'domcontentloaded', timeout: 0 });
+    console.log("Login page loaded");
+    
+    // Get the title of the page
+    const pageTitle = await page.title();
+    console.log("Current page title:", pageTitle);
+    
+    // Close the browser
+    await browser.close();
+    
+    // Send the page title as the response
+    res.send(pageTitle);
 });
 
 app.get('/test',async function (req,res){

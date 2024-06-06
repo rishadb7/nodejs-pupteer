@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "express": "^4.19.2",
+    "playwright": "^1.44.1",
     "puppeteer": "^22.10.0"
   }
 }
