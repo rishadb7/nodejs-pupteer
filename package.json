@@ -18,6 +18,8 @@
   "homepage": "https://github.com/rishadb7/nodejs-pupteer#readme",
   "dependencies": {
     "express": "^4.19.2",
+    "playwright": "^1.44.1",
+    "playwright-extra": "^4.3.6",
     "puppeteer": "^22.10.0",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-recaptcha": "^3.6.8",
