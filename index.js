@@ -186,7 +186,7 @@ app.get('/it2', async function (req, res) {
         });
 
         await page.waitForSelector('#loginPasswordField');
-        await page.type('#loginPasswordField', 'Pattanath7@', { delay: 0 });
+        await page.type('#loginPasswordField', '######', { delay: 0 });
 
 
         await page.waitForSelector('.large-button-primary.width.marTop26');
